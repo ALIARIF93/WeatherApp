@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --white: #fff;
+  --border-color: #186196;
+  --background-color: #031624;
+  --crimson: crimson;
+  --light-gray: rgb(172, 171, 171);
+  --gray: rgb(85, 83, 83);
+  --orange: #ff8c00;
+  --black: black;
+  --weather-card-background-color: rgb(54, 40, 40);
+  --button-hover: #ff1e42;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+  background-color: var(--background-color);
+}
+html {
+  font-size: 10px;
+}
+/* .background {
+  background-image: url("/images/bg-extra-large.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+} */
+/* .background {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+} */
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(90vh);
+
+  background-color: var(--background-color);
+}
+.weatherResultsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 5rem;
+  row-gap: 5rem;
+  margin-top: 8rem;
+  justify-content: center;
+  border: 1px solid white;
+
+  /* min-height: calc(100vh - 95px); */
+  min-height: calc(auto);
+}
+
+.heading {
+  color: var(--white);
+  font-size: 8rem;
+  font-weight: 900;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2rem;
+  /* border: 1px solid white; */
+}
+.heading1 {
+  color: var(--white);
+  font-size: 8rem;
+  font-weight: 900;
+  display: none;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2rem;
+  /* border: 1px solid white; */
+}
+
+.licenseDetails {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 900;
+
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  margin-top: 8rem;
+}
+.licenseDetails span {
+  border-bottom: 0.5rem solid var(--crimson);
+  /* white-space: nowrap; */
+}
+.licenseDetails p a {
+  text-decoration: none;
+  color: rgb(119, 119, 189);
+}
+.button {
+  width: 8rem;
+  height: 2rem;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: var(--crimson);
+  transition: all 0.3s linear;
+}
+.goBackButton {
+  width: 10rem;
+  height: 3rem;
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+.button:hover {
+  background-color: var(--button-hover);
+}
+
+.footer {
+  margin: 2.5rem 0;
+  /* bottom: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 400;
+
+  color: white;
+}
+.footer span {
+  border-bottom: 0.3rem solid var(--crimson);
+}
+.footer a {
+  text-decoration: none;
+  color: var(--white);
+}
+.horizontalSpacing {
+  height: 3rem;
+  margin: 0 1rem;
+  border: 1px solid var(--white);
+}
+
+@media screen and (max-width: 1660px) {
+  .licenseDetails {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 1560px) {
+  .licenseDetails {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 1460px) {
+  .licenseDetails {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .licenseDetails {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .heading {
+    font-size: 7rem;
+  }
+  .licenseDetails {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .heading {
+    font-size: 6rem;
+  }
+  .licenseDetails {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 660px) {
+  .heading {
+    font-size: 5rem;
+  }
+  .licenseDetails {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 570px) {
+  .heading {
+    font-size: 4.5rem;
+  }
+  .goBackButton {
+    margin-top: 1.5rem;
+    width: 40rem;
+  }
+  .licenseDetails {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    font-size: 3.5rem;
+  }
+  .goBackButton {
+    margin-top: 1.5rem;
+    width: 30rem;
+  }
+  .licenseDetails {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .heading {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .heading {
+    display: none;
+  }
+  .heading1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 3.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .goBackButton {
+    width: 25rem;
+  }
+}
