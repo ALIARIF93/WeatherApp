@@ -310,6 +310,7 @@ input:focus {
   color: white;
 }
 .footer span {
+  font-weight: 900;
   border-bottom: 0.3rem solid var(--crimson);
 }
 .footer a {
